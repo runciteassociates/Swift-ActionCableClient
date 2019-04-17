@@ -491,9 +491,9 @@ extension ActionCableClient : CustomDebugStringConvertible {
     }
 }
 
-extension ActionCableClient : CustomPlaygroundQuickLookable {
-  public var customPlaygroundQuickLook: PlaygroundQuickLook {
-        return PlaygroundQuickLook.url(socket.currentURL.absoluteString)
+extension ActionCableClient : CustomPlaygroundDisplayConvertible {
+    public var playgroundDescription: Any {
+        return socket.currentURL.absoluteString
     }
 }
 
