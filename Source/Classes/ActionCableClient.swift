@@ -422,7 +422,7 @@ extension ActionCableClient {
             switch(message.messageType) {
             case .unrecognized:
                 break
-            case .welcome:
+            case .welcome, .disconnect:
                 break
             case .ping:
                 if let callback = onPing {

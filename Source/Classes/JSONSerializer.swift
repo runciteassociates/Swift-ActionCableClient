@@ -123,7 +123,7 @@ internal class JSONSerializer {
                                error: nil)
               
             // Welcome/Ping messages
-            case .welcome, .ping:
+            case .welcome, .ping, .disconnect:
                 return Message(channelName: nil,
                                actionName: nil,
                                messageType: messageType,
